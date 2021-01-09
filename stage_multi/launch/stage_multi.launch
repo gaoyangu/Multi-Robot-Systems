@@ -1,0 +1,7 @@
+<launch>
+    <node name="stage" pkg="stage_ros" type="stageros" args="$(find stage_multi)/world/willow-multi-erratic.world"/>
+    <node name="move_robot_0" pkg="stage_multi" type="move_robot" args="0" output="screen"/> 
+    <node name="move_robot_1" pkg="stage_multi" type="move_robot" args="1" output="screen"/> 
+    <node name="move_robot_2" pkg="stage_multi" type="move_robot" args="2" output="screen"/> 
+    <node name="move_robot_3" pkg="stage_multi" type="move_robot" args="3" output="screen"/> 
+</launch>
