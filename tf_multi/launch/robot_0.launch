@@ -1,0 +1,7 @@
+<launch>
+    <group ns="robot_0">
+        <param name="tf_prefix" value="robot_0"/>
+        <node pkg="tf" type="static_transform_publisher" name="link_broadcaster" args="-11.5 23.5 0 0 0 0 /map /robot_0/odom 100"/>
+        <node pkg="tf_multi" type="print_position" name="print_position" output="screen"/>
+    </group>
+</launch>

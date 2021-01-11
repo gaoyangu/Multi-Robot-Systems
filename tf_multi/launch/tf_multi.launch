@@ -1,0 +1,8 @@
+<launch>
+    <param name="/use_sim_time" value="true"/>
+    <node name="stage" pkg="stage_ros" type="stageros" args="$(find tf_multi)/world/willow-multi-erratic.world"/>
+    <include file="$(find tf_multi)/launch/robot_0.launch"/>
+    <include file="$(find tf_multi)/launch/robot_1.launch"/>
+    <include file="$(find tf_multi)/launch/robot_2.launch"/>
+    <include file="$(find tf_multi)/launch/robot_3.launch"/>
+</launch>
