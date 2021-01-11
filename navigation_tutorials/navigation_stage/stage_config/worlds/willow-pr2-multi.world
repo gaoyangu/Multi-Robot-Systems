@@ -22,7 +22,7 @@ define pr2 position
   origin [-0.05 0 0 0]
   gui_nose 1
   drive "omni"
-  topurg(pose [ 0.275 0.000 0 0.000 ])
+  topurg(pose [ 0.275 0.000 -0.1 0.000 ])
 )
 
 define floorplan model
@@ -62,10 +62,14 @@ floorplan
   name "willow"
   bitmap "../maps/willow-full.pgm"
   size [58.4 52.6 0.5]
-  pose [ -26.300 29.200 0 90.000 ]
+  # pose [ -26.300 29.200 0 90.000 ]
+  pose [ 29.200 26.300 0 0 ]
 )
 
 # throw in a robot
-pr2( pose [ -21.670 47.120 0 28.166 ] name "pr2_0" color "blue")
-pr2( pose [ -21.670 48.120 0 28.166 ] name "pr2_1" color "green")
-block( pose [ -24.269 48.001 0 180.000 ] color "red")
+# pr2( pose [ -21.670 47.120 0 28.166 ] name "pr2_0" color "blue")
+# pr2( pose [ -21.670 48.120 0 28.166 ] name "pr2_1" color "green")
+# block( pose [ -24.269 48.001 0 180.000 ] color "red")
+pr2( pose [ 9.5 14.5 0 28.166 ] name "pr2_0" color "blue")
+pr2( pose [ 9.5 15.5 0 28.166 ] name "pr2_1" color "green")
+block( pose [ 12.5 15.5 0 180.000 ] color "red")
