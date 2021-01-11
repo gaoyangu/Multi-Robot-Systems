@@ -2,5 +2,6 @@
     <group ns="robot_1">
         <param name="tf_prefix" value="robot_1"/>
         <node pkg="tf" type="static_transform_publisher" name="link_broadcaster" args="-13.5 23.5 0 0 0 0 /map /robot_1/odom 100"/>
+        <node pkg="tf_multi" type="follower" name="follower" args="0" output="screen"/>
     </group>
 </launch>

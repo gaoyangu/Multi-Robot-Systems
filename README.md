@@ -12,6 +12,18 @@ $ rosrun multi_sync monitor 4
 $ roslaunch stage_multi stage_multi.launch
 ```
 
+### 3. Find Robots Position
+```bash
+$ roslaunch tf_multi tf_multi.launch
+$ rosrun teleop_twist_keyboard teleop_twist_keyboard.py cmd_vel:=robot_0/cmd_vel
+```
+
+### 4. Leader-Follower Formation
+```bash
+$ roslaunch tf_multi tf_multi.launch
+$ rosrun teleop_twist_keyboard teleop_twist_keyboard.py cmd_vel:=robot_0/cmd_vel
+```
+
 ## Thanks
 - [89-689: Multi-Robot Systems](https://u.cs.biu.ac.il/~yehoshr1/89-689/) (Summer 2015)
 - [89-685: Introduction to Robotics](https://u.cs.biu.ac.il/~yehoshr1/89-685/) (Fall 2016)

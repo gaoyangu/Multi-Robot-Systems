@@ -135,6 +135,7 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/tf_multi_node.cpp)
 add_executable(print_position src/print_position.cpp)
+add_executable(follower src/follower.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -151,6 +152,9 @@ add_executable(print_position src/print_position.cpp)
 #   ${catkin_LIBRARIES}
 # )
 target_link_libraries(print_position
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(follower
   ${catkin_LIBRARIES}
 )
 
