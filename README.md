@@ -38,6 +38,11 @@ $roslaunch navigation_multi navigation_multi.launch
 $roslaunch navigation_multi send_goals.launch
 ```
 
+### 7. Spanning and Controlling multiple robots in Gazebo
+```bash
+$roslaunch gazebo_multi gazebo_multi.launch
+```
+
 ## Thanks
 - [89-689: Multi-Robot Systems](https://u.cs.biu.ac.il/~yehoshr1/89-689/) (Summer 2015)
 - [89-685: Introduction to Robotics](https://u.cs.biu.ac.il/~yehoshr1/89-685/) (Fall 2016)
