@@ -42,8 +42,7 @@ pair<double, double> getRobotPosition(int robot_no)
     tf::TransformListener listener;
     tf::StampedTransform transform;
     pair<double, double> currPosition;
-    try
-    {
+    try{
         string robot_str = "/robot_";
         robot_str += boost::lexical_cast<string>(robot_no);
         string base_footprint_frame = tf::resolve(robot_str, "base_footprint");
@@ -52,8 +51,7 @@ pair<double, double> getRobotPosition(int robot_no)
         currPosition.first = transform.getOrigin().x();
         currPosition.second = transform.getOrigin().y();
     }
-    catch(tf::TransformException &ex)
-    {
+    catch(tf::TransformException &ex){
         ROS_ERROR("%s", ex.what());
     }
     return currPosition;

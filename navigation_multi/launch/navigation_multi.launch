@@ -2,11 +2,11 @@
   <master auto="start"/>
   <param name="/use_sim_time" value="true"/>
 
-  <node pkg="map_server" type="map_server" name="map_server" args="$(find navigation_stage)/stage_config/maps/willow-full.pgm 0.1" respawn="false" >
+  <node pkg="map_server" type="map_server" name="map_server" args="$(find navigation_multi)/stage_config/maps/willow-full.pgm 0.1" respawn="false" >
     <param name="frame_id" value="/map" />
   </node>
 
-  <node pkg="stage_ros" type="stageros" name="stageros" args="$(find navigation_stage)/stage_config/worlds/willow-pr2-multi.world" respawn="false">
+  <node pkg="stage_ros" type="stageros" name="stageros" args="$(find navigation_multi)/stage_config/worlds/willow-pr2-multi.world" respawn="false">
     <param name="base_watchdog_timeout" value="0.2"/>
   </node>
 
