@@ -1,0 +1,21 @@
+<launch>
+
+    <include file="$(find gazebo_ros)/launch/empty_world.launch" />
+    
+    <param name="robot_description" command="$(find xacro)/xacro.py $(find lizi_description)/urdf/lizi.urdf robot_id:=1" />
+    <!-- <param name="robot_description1" command="$(find xacro)/xacro.py $(find lizi_description)/urdf/lizi.urdf robot_id:=2" /> -->
+    <!-- <param name="robot_description2" command="$(find xacro)/xacro.py $(find lizi_description)/urdf/lizi.urdf robot_id:=3" /> -->
+    
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+        <param name="rate" value="100" />
+    </node>
+
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher">
+        <param name="publish_frequency" value="100" />
+    </node>
+
+    <node name="spawn_table1" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description  -x 0 -z 0.3 -model lizi1" respawn="false" output="screen" />
+    <!-- <node name="spawn_table2" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description1 -x 1 -z 0.3 -model lizi2" respawn="false" output="screen" /> -->
+    <!-- <node name="spawn_table3" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description2 -x 2 -z 0.3 -model lizi3" respawn="false" output="screen" /> -->
+
+</launch>

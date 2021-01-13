@@ -1,0 +1,272 @@
+<robot
+  name="lizi_urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00740029995582005 -2.28205996951805E-05 -0.0185383676881744"
+        rpy="0 0 0" />
+      <mass
+        value="0.737825665359006" />
+      <inertia
+        ixx="0.00443729503022144"
+        ixy="-0.000146932517007627"
+        ixz="0.000385689591614384"
+        iyy="0.0102726152318081"
+        iyz="2.25160881374285E-06"
+        izz="0.0122176381167974" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizi_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizi_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="FL_wheel">
+    <inertial>
+      <origin
+        xyz="1.22832299886966E-13 -0.0437656188895607 -2.26337004693988E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.628863260607655" />
+      <inertia
+        ixx="0.0011775370427045"
+        ixy="-5.42894125322565E-16"
+        ixz="-1.02893303220018E-12"
+        iyy="0.00215242721820778"
+        iyz="-9.13724670627397E-14"
+        izz="0.00117753703821153" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizi_urdf/meshes/FL_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizi_urdf/meshes/FL_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_joint"
+    type="continuous">
+    <origin
+      xyz="0.074003 0.1825 -0.04145"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="FL_wheel" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="RL_Wheel">
+    <inertial>
+      <origin
+        xyz="-0.199999999999878 -0.0437656188895606 -2.26411944748151E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.628863260607654" />
+      <inertia
+        ixx="0.0011775370427045"
+        ixy="-5.42922210117761E-16"
+        ixz="-1.02893248605437E-12"
+        iyy="0.00215242721820777"
+        iyz="-9.13722944336042E-14"
+        izz="0.00117753703821152" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizi_urdf/meshes/RL_Wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizi_urdf/meshes/RL_Wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RL_Joint"
+    type="continuous">
+    <origin
+      xyz="-0.126 0.1825 -0.04145"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RL_Wheel" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="FR_Wheel">
+    <inertial>
+      <origin
+        xyz="-2.04403161063738E-12 0.0437656188895606 -9.79660796929238E-13"
+        rpy="0 0 0" />
+      <mass
+        value="0.628863260607655" />
+      <inertia
+        ixx="0.00117753703838158"
+        ixy="7.98742831623608E-14"
+        ixz="1.33933241813037E-12"
+        iyy="0.00215242721820778"
+        iyz="4.43766701026677E-14"
+        izz="0.00117753704253445" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizi_urdf/meshes/FR_Wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizi_urdf/meshes/FR_Wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_Joint"
+    type="continuous">
+    <origin
+      xyz="0.074003 -0.1825 -0.04145"
+      rpy="-1.0694E-16 1.4202E-32 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="FR_Wheel" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="RR_Wheel">
+    <inertial>
+      <origin
+        xyz="2.59875454489134E-12 0.0437656188895579 1.03773240001104E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.628863260607702" />
+      <inertia
+        ixx="0.00117753704180015"
+        ixy="-9.03407278285203E-14"
+        ixz="-1.98182107521996E-12"
+        iyy="0.00215242721820778"
+        iyz="-2.17479773270897E-15"
+        izz="0.00117753703911603" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizi_urdf/meshes/RR_Wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizi_urdf/meshes/RR_Wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR_Joint"
+    type="continuous">
+    <origin
+      xyz="-0.126 -0.1825 -0.04145"
+      rpy="-1.0694E-16 1.4202E-32 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RR_Wheel" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+  <plugin name='skid_steer_drive_controller' filename='libgazebo_ros_skid_steer_drive.so'>
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/pioneer_${robot_id}</robotNamespace>
+    <leftFrontJoint>FL_Joint</leftFrontJoint>
+    <rightFrontJoint>FR_Joint</rightFrontJoint>
+    <leftRearJoint>RL_Joint</leftRearJoint>
+    <rightRearJoint>RR_Joint</rightRearJoint>
+    <wheelSeparation>0.4</wheelSeparation>
+    <wheelDiameter>0.215</wheelDiameter>
+    <odometryTopic>odom_raw</odometryTopic>
+    <robotBaseFrame>/odom_tf</robotBaseFrame>
+    <torque>120</torque>
+    <commandTopic>cmd_vel_raw</commandTopic>
+    <broadcastTF>1</broadcastTF>
+  </plugin>
+</robot>

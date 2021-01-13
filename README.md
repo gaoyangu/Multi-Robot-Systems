@@ -2,6 +2,7 @@
 
 ## Todo
 - [ ] backup : slide and code  
+- [ ] gazebo_navogation_multi
 
 ## Usage
 ### 1. Simulating multiple robots in Stage
@@ -41,6 +42,11 @@ $roslaunch navigation_multi send_goals.launch
 ### 7. Spanning and Controlling multiple robots in Gazebo
 ```bash
 $roslaunch gazebo_multi gazebo_multi.launch
+```
+
+### 8. Running Navigation Stack in Gazebo
+```bash
+$roslaunch gazebo_navigation_multi gazebo_navigaiton_multi.launch
 ```
 
 ## Thanks

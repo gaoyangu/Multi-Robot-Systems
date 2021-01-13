@@ -1,0 +1,13 @@
+<launch>
+  
+  <!-- Parameters ====================================================== -->
+
+  <param name="/use_sim_time" value="true" />
+
+  <!-- World file generation =========================================== -->
+  <node pkg="xacro" type="xacro" name="wg" args="$(find lizi_description)/models/lizi_single_wall.xacro -o $(find lizi_description)/worlds/lizi.world"/>
+
+  <!-- Gazebo simulation =============================================== -->
+  <node pkg="gazebo_ros" type="gazebo" args="$(find lizi_description)/worlds/lizi.world" name="gazebo_sim" required="true" />
+
+</launch>

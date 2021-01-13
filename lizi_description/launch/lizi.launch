@@ -1,0 +1,21 @@
+<launch>
+  
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find dm_teamwork_examples)/worlds/low_physics.world" />
+    </include>
+
+    <param name="robot_description" command="$(find xacro)/xacro.py $(find lizi_description)/urdf/lizi.urdf robot_id:=1" />
+
+    <node name="spawn_lizi" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -x 0 -y 0 -z 0.3 -model lizi" respawn="false" output="screen" />
+
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher">
+        <param name="publish_frequency" value="50" />
+    </node>
+
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+        <param name="rate" value="50" />
+    </node>
+
+    <node name="kinect_front_stabilized_tf" pkg="tf" type="static_transform_publisher" args="0 0 0 -1.5707 0 -1.5707 kinect_link kinect_link_stabilized 100" />
+
+</launch>
